@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/icon-font.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+
+  <title>KREIS | KITCHENS</title>
+</head>
+
+<body>
+
+  <!-- ====================== HEADER SECTION ====================== -->
+  <header class="header">
+      <div></div>
+      <div class="header__logo-box">
+        <div></div>
+        <div><img src="assets/img/logo.svg" alt="Logo" class="header__logo"></div> <!--Under score for elements + name of the element-->
+        <div></div>
+      </div>
+      <div></div>
+  </header> <!-- ./header-section -->
+
+  <main> <!-- tells search engines this is the main part of the site. -->
+
+    <!-- ====================== ABOUT SECTION ====================== -->
+    <section class="about">
+      <div class="about__content">
+        <div class="about__empty"></div>
+        <div class="about__details">
+          <p><strong>Somos una empresa</strong> Ius ad placerat democritum voluptatum. Id
+             repudiare quaerendum mei, ei mel esse harum urbanitas, ei utinam accusam detraxit usu. 
+             Duo ex elitr tritani. Cu alii ludus tempor vis, vel te elit tibique invidunt, vel id labitur 
+             facilis legendos. Sit altera mentitum phaedrum an, ei usu oblique voluptatibus. 
+             An tota rebum ornatus mel.</p>
+        </div>
+      </div>
+
+    </section><!-- ./about-section -->
+
+    <!-- ====================== GALLERY SECTION ====================== -->
+    <section class="gallery">
+        <div class="gallery__content"> 
+          <div class="gallery__one"><div><img src="assets/img/gallery/menu/proyectos.png" onclick="openModal();currentSlide(1)" alt="Proyectos"> <p>PROYECTOS</p></div></div>
+          <div class="gallery__two"><div><img src="assets/img/gallery/menu/electrodomesticos.png" onclick="openModal2();currentSlide2(1)" alt="Electrodomesticos"> <p>ELECTRÓDOMESTICOS</p></div></div>
+          <div class="gallery__three"><div><img src="assets/img/gallery/menu/materiales.png" onclick="openModal3();currentSlide3(1)" alt="Materiales"> <p>MATERIALES</p></div></div>
+        </div>  
+
+      </section><!-- ./about-section -->
+
+      <div class="footer">
+        <div class="footer__empty"></div>
+        <div class="footer__social">
+            <div><a href="https://www.linkedin.com/in/landscape-mexico-510497168/" target="_blank"><img src="assets/img/icons/linkedin.svg" alt="LinkedIn"></a></div>
+            <div><a href="fb://page/181545055584208?ti=as" target="_blank"><img src="assets/img/icons/facebook.svg" alt="Facebook"></a></div>
+            <div><a href="https://www.instagram.com/landscapemexicoo" target="_blank"><img src="assets/img/icons/instagram.svg" alt="Instagram"></a></div>   
+            <div><a href="https://www.youtube.com/channel/UCfREwtRj6s3fvOWY5lXXO_A" target="_blank"><img src="assets/img/icons/youtube.svg" alt="Youtube"></a></div>
+            <div><a href="tel:3317208651" target="_blank"><img src="assets/img/icons/whatsapp.svg" alt="whatsapp"></a></div>
+        </div>
+      </div>
+
+      <p class="copyright">MMXXVII KREIS KITCHENS México | © Copyright 2018 <a href="#">Leonardo Grinn</a>.</p>
+
+
+      <!-- ************** G A L L E R Y  O N E ************** -->
+      <div id="myModal" class="modal transition-fadeInPersist">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides transition-fadeInPersist" id="myViewModal">
+            <div class="numbertext">1 / 5</div>
+            <img src="assets/img/gallery/1.png" style="width:100%">
+          </div>
+      
+          <div class="mySlides transition-fadeInPersist" id="myViewModal">
+            <div class="numbertext">2 / 5</div>
+            <img src="assets/img/gallery/2.png" style="width:100%">
+          </div>
+      
+          <div class="mySlides transition-fadeInPersist" id="myViewModal">
+            <div class="numbertext">3 / 5</div>
+            <img src="assets/img/gallery/3.png" style="width:100%">
+          </div>
+          
+          <div class="mySlides transition-fadeInPersist" id="myViewModal">
+            <div class="numbertext">4 / 5</div>
+            <img src="assets/img/gallery/4.png" style="width:100%">
+          </div>
+
+          <div class="mySlides transition-fadeInPersist" id="myViewModal">
+            <div class="numbertext">5 / 5</div>
+            <img src="assets/img/gallery/5.png" style="width:100%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+
+      <!-- ************** G A L L E R Y  T W O ************** -->
+      <div id="myModal2" class="modal2 transition-fadeInPersist">
+        <span class="close2 cursor" onclick="closeModal2()">&times;</span>
+        <div class="modal-content2">
+      
+          <div class="mySlides2 transition-fadeInPersist" id="myViewModal2">
+            <div class="numbertext">1 / 5</div>
+            <img src="assets/img/gallery/1.png" style="width:100%">
+          </div>
+      
+          <div class="mySlides2 transition-fadeInPersist" id="myViewModal2">
+            <div class="numbertext">2 / 5</div>
+            <img src="assets/img/gallery/2.png" style="width:100%">
+          </div>
+      
+          <div class="mySlides2 transition-fadeInPersist" id="myViewModal2">
+            <div class="numbertext">3 / 5</div>
+            <img src="assets/img/gallery/3.png" style="width:100%">
+          </div>
+          
+          <div class="mySlides2 transition-fadeInPersist" id="myViewModal2">
+            <div class="numbertext">4 / 5</div>
+            <img src="assets/img/gallery/4.png" style="width:100%">
+          </div>
+
+          <div class="mySlides2 transition-fadeInPersist" id="myViewModal2">
+            <div class="numbertext">5 / 5</div>
+            <img src="assets/img/gallery/5.png" style="width:100%">
+          </div>
+          
+          <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+          <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+        </div>
+      </div>
+      
+      <!-- ************** G A L L E R Y  T H R E E ************** -->
+      <div id="myModal3" class="modal3 transition-fadeInPersist">
+        <span class="close3 cursor" onclick="closeModal3()">&times;</span>
+        <div class="modal-content3">
+      
+          <div class="mySlides3 transition-fadeInPersist" id="myViewModal3">
+            <div class="numbertext">1 / 5</div>
+            <img src="assets/img/gallery/1.png" style="width:100%">
+          </div>
+      
+          <div class="mySlides3 transition-fadeInPersist" id="myViewModal3">
+            <div class="numbertext">2 / 5</div>
+            <img src="assets/img/gallery/2.png" style="width:100%">
+          </div>
+      
+          <div class="mySlides3 transition-fadeInPersist" id="myViewModal3">
+            <div class="numbertext">3 / 5</div>
+            <img src="assets/img/gallery/3.png" style="width:100%">
+          </div>
+          
+          <div class="mySlides3 transition-fadeInPersist" id="myViewModal3">
+            <div class="numbertext">4 / 5</div>
+            <img src="assets/img/gallery/4.png" style="width:100%">
+          </div>
+
+          <div class="mySlides3 transition-fadeInPersist" id="myViewModal3">
+            <div class="numbertext">5 / 5</div>
+            <img src="assets/img/gallery/5.png" style="width:100%">
+          </div>
+          
+          <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+          <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+        </div>
+      </div>
+      
+
+</body>
+<script type="text/javascript" src="assets/js/full-gallery.js"></script>
+</html>

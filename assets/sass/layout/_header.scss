@@ -1,0 +1,71 @@
+/* ==================================================
+////////////////// HEADER SECTION ///////////////////
+================================================== */
+.header {
+    height: 85vh; /* number * VH means viewport hight */
+    background-image: url('../img/bg/Bg-small.png'); /* linear gradients allows you to put a mask over the image*/
+    background-size: cover; /* cover size try to fit the width box the best it cans */
+    background-position: top; /* stay always on top view of the image */
+
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 1fr;
+  
+    @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%); /* >> x y << Every "," is a line of the box */
+      -moz-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%); /* >> x y << Every "," is a line of the box */
+      clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%); /* >> x y << Every "," is a line of the box */
+  
+      height: 95vh; /* number * VH means viewport hight */
+    }
+  
+    /* Portrait tablet */
+    @include respond(ipad) {
+      height: 55vh;
+  
+      @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
+        /* >> x y << Every "," is a line of the box */
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
+        /* >> x y << Every "," is a line of the box */
+        clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
+        /* >> x y << Every "," is a line of the box */
+        height: 60vh;
+        /* number * VH means viewport hight */
+      }
+    }
+  
+    //Swicth to a better image resolution.
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), //Standar Apple retina screen.
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), //Suppporting Safari.
+      only screen and (min-width: 125px) {
+      background-image: url('../img/bg/Bg-full.png');
+    }
+  
+    @include respond(iphone-plus) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%); /* >> x y << Every "," is a line of the box */
+      -moz-clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%); /* >> x y << Every "," is a line of the box */
+      clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%); /* >> x y << Every "," is a line of the box */
+
+      height: 50vh;
+    }
+  
+  /* Logo company */
+    &__logo-box { // Postition. 
+
+        display: grid;
+        grid-template-columns: 1fr 5fr 2fr;
+    
+        img {
+            width: 100%;
+        }
+
+        @include respond(ipad) {
+          grid-template-columns: 1fr 5fr 1fr;
+        }
+
+        @include respond(iphone-plus) {
+          grid-template-columns: 0.5fr 5fr 0.5fr;
+        }
+    }
+  }
+  

@@ -1,0 +1,62 @@
+.about {
+    @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0vh); /* >> x y << Every "," is a line of the box */
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0vh); /* >> x y << Every "," is a line of the box */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0vh); /* >> x y << Every "," is a line of the box */
+    
+        height: 75vh; /* number * VH means viewport hight */
+      }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;        
+    }
+
+    &__details {
+        padding-right: 5rem;
+
+        p {
+            font-size: 2rem;
+        }
+
+        strong {
+            color: $color-black;
+            font-weight: bold;
+        }
+    }
+
+
+    @include respond(ipad) {
+        @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: none;; /* >> x y << Every "," is a line of the box */
+            -moz-clip-path: none;; /* >> x y << Every "," is a line of the box */
+            clip-path: none; /* >> x y << Every "," is a line of the box */
+        
+            height: 80vh; /* number * VH means viewport hight */
+        }
+        
+        &__content {
+            grid-template-columns: 1fr; 
+            margin-bottom: 5rem;       
+        }
+
+        &__details {
+            padding-right: 5rem;
+            padding-left: 5rem;
+            margin-top: 5rem;
+    
+            p {
+                font-size: 2rem;
+            }
+    
+            strong {
+                color: $color-black;
+                font-weight: bold;
+            }
+        }
+
+        .about__empty {
+            display: none;
+        }
+    }
+}
