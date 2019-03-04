@@ -288,7 +288,7 @@ body {
           /* number * VH means viewport hight */ } } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125px) {
     .header {
-      background-image: url("../img/bg/Bg-full.png"); } }
+      background-image: url("../img/bg/Bg-small.png"); } }
   @media only screen and (max-width: 31.25em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%);
@@ -392,12 +392,20 @@ body {
     padding-left: 5rem;
     margin-top: 5rem; }
     .about__details p {
-      font-size: 2rem; }
+      font-size: 1.8rem; }
     .about__details strong {
       color: #000;
       font-weight: bold; }
   .about .about__empty {
     display: none; } }
+
+@media only screen and (max-width: 31.25em) {
+  .about__details {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin-top: 5rem; }
+    .about__details p {
+      font-size: 1.6rem; } }
 
 .gallery {
   background-color: #000;

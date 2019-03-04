@@ -38,7 +38,7 @@
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), //Standar Apple retina screen.
       only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), //Suppporting Safari.
       only screen and (min-width: 125px) {
-      background-image: url('../img/bg/Bg-full.png');
+      background-image: url('../img/bg/Bg-small.png');
     }
   
     @include respond(iphone-plus) {
