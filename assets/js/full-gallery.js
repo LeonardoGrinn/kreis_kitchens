@@ -41,7 +41,7 @@ function openModal() {
     showSlides(slideIndex = n);
   }
   
-/* ////////////// G A L L E R Y  T W O ////////////// */
+/* ////////////// G A L L E R Y  T W O ////////////// 
 function showSlides2(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides2");
@@ -81,8 +81,8 @@ function openModal2() {
   }
   
   function currentSlide2(n) {
-    showSlides2(slideIndex = n);
-  }
+    showSlides2(slideIndex = n); 
+  }*/
 
   /* ////////////// G A L L E R Y  T H R E E ////////////// */
 function showSlides3(n) {

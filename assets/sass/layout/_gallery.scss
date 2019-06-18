@@ -1,47 +1,54 @@
 .gallery {
     background-color:  $color-black;
-    transform: translateY(-50rem);
-    @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-        -webkit-clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%); /* >> x y << Every "," is a line of the box */
-        -moz-clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%); /* >> x y << Every "," is a line of the box */
-        clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%); /* >> x y << Every "," is a line of the box */
+    transform: translateY(-40rem);
+    // @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    //     -webkit-clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%); /* >> x y << Every "," is a line of the box */
+    //     -moz-clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%); /* >> x y << Every "," is a line of the box */
+    //     clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%); /* >> x y << Every "," is a line of the box */
     
-        height: 95vh; /* number * VH means viewport hight */
+    //     height: 95vh; /* number * VH means viewport hight */
 
-    }
+    // }
 
         @include respond(ipad) {
-            @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-                -webkit-clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%); /* >> x y << Every "," is a line of the box */
-                -moz-clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%); /* >> x y << Every "," is a line of the box */
-                clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%); /* >> x y << Every "," is a line of the box */
+        transform: translateY(-60rem);
+        height: 60rem;
+        //     @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        //         -webkit-clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%); /* >> x y << Every "," is a line of the box */
+        //         -moz-clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%); /* >> x y << Every "," is a line of the box */
+        //         clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%); /* >> x y << Every "," is a line of the box */
             
-                height: 105vh; /* number * VH means viewport hight */
-        } 
+        //         height: 105vh; /* number * VH means viewport hight */
+        // } 
       }
 
 
       @include respond(iphone-plus) {
         transform: translateY(5rem);
 
-        @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-            -webkit-clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%); /* >> x y << Every "," is a line of the box */
-            -moz-clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%); /* >> x y << Every "," is a line of the box */
-            clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%); /* >> x y << Every "," is a line of the box */
+        height: 95rem;
+
+    //     @supports (clip-path:0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    //         -webkit-clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%); /* >> x y << Every "," is a line of the box */
+    //         -moz-clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%); /* >> x y << Every "," is a line of the box */
+    //         clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%); /* >> x y << Every "," is a line of the box */
         
-            height: 170vh; /* number * VH means viewport hight */
-      }
+    //         height: 170vh; /* number * VH means viewport hight */
+    //   }
     }
 
     &__content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        padding-left: 10rem;
+        //grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        //padding-left: 10rem;
+        padding-left: 10%;
+        padding-right: 10%;
 
         @include respond(ipad) {
             grid-template-columns: repeat(2, 1fr);
-            padding-left: 5rem;
-            padding-right: 5rem;
+            padding-left: 5%;
+            padding-right: 5%;
         }
 
         @include respond(iphone-plus) {
@@ -51,12 +58,12 @@
 
 
     &__one, &__two, &__three {
-        height: 40vh;
+        //height: 40vh;
         display: flex;  
         align-items: center;
         justify-content: center;
         align-content: center;
-        transform: translateY(27vh);
+        //transform: translateY(27vh);
 
         filter: grayscale(100%);
         transition: all ease 0.5s;
@@ -81,7 +88,7 @@
         }
 
         @include respond(ipad) {
-            transform: translateY(18vh);
+            //transform: translateY(18vh);
 
             p {
                 font-size: 2.5rem;
@@ -95,9 +102,10 @@
         }
     }
 
-    &__one {
+    &__one, &__three {
         //transform: translateY(20vh);
-        padding-left: 5rem;
+        //padding-left: 5rem;
+        padding-top: 5%;
               
         img {
 
@@ -105,18 +113,18 @@
         }
 
         p {
-            transform: translateY(-23rem);
+            transform: translateY(-550%);
         }
 
         @include respond(ipad) {
-            padding-left: 0; 
+            padding-top: 20%;
 
             img {
                 width: 90%;
             }
 
             p {
-                transform: translateY(-18rem);
+                //transform: translateY(-18rem);
             }
             
         }
@@ -128,74 +136,74 @@
         }
     }
 
-    &__two {
-        //transform: translateY(30rem);
-        img {
-            width: 75%;
-        }
+    // &__two {
+    //     //transform: translateY(30rem);
+    //     img {
+    //         width: 75%;
+    //     }
 
-        p {
-            transform: translateY(-20rem);
-        }
+    //     p {
+    //         transform: translateY(-20rem);
+    //     }
 
-        margin-left: 5rem;
+    //     margin-left: 5rem;
 
-        @include respond(ipad) {
-            margin-left: 0;
-            margin-top: 15rem; 
+    //     @include respond(ipad) {
+    //         margin-left: 0;
+    //         margin-top: 15rem; 
 
-            img {
-               width: 90%;
-            }
+    //         img {
+    //            width: 90%;
+    //         }
 
-            p {
-                transform: translateY(-18rem);
-            }
-        }
+    //         p {
+    //             transform: translateY(-18rem);
+    //         }
+    //     }
 
-        @include respond(iphone-plus) {
+    //     @include respond(iphone-plus) {
             
-            transform: translateY(1rem);
+    //         transform: translateY(1rem);
 
-            p {
-                transform: translateY(-16rem);
-            }
+    //         p {
+    //             transform: translateY(-16rem);
+    //         }
             
-        }
-    }
+    //     }
+    // }
 
-    &__three {
-        //transform: translateY(30rem);
-        margin-right: 5rem;
+    // &__three {
+    //     //transform: translateY(30rem);
+    //     margin-right: 5rem;
 
-        img {
-            width: 60%;
-        }
+    //     img {
+    //         width: 60%;
+    //     }
 
-        p {
-            transform: translateY(-17rem);
-        }
+    //     p {
+    //         transform: translateY(-17rem);
+    //     }
 
-        @include respond(ipad) {
-            margin-right: 0; 
-            transform: translateY(-1rem);
-            img {
-               width: 90%;
-            }
+    //     @include respond(ipad) {
+    //         margin-right: 0; 
+    //         transform: translateY(-1rem);
+    //         img {
+    //            width: 90%;
+    //         }
 
-            p {
-                transform: translateY(-18rem);
-            }
-        }
+    //         p {
+    //             transform: translateY(-18rem);
+    //         }
+    //     }
 
-        @include respond(iphone-plus) {
+    //     @include respond(iphone-plus) {
             
-            transform: translateY(5rem);
+    //         transform: translateY(5rem);
 
-            p {
-                transform: translateY(-16rem);
-            }
+    //         p {
+    //             transform: translateY(-16rem);
+    //         }
             
-        }
-    }
+    //     }
+    // }
 }

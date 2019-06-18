@@ -392,7 +392,7 @@ body {
     padding-left: 5rem;
     margin-top: 5rem; }
     .about__details p {
-      font-size: 1.8rem; }
+      font-size: 2.2rem; }
     .about__details strong {
       color: #000;
       font-weight: bold; }
@@ -409,60 +409,33 @@ body {
 
 .gallery {
   background-color: #000;
-  transform: translateY(-50rem); }
-  @supports (clip-path: 0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-    .gallery {
-      -webkit-clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%);
-      /* >> x y << Every "," is a line of the box */
-      -moz-clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%);
-      /* >> x y << Every "," is a line of the box */
-      clip-path: polygon(0 0, 100% 30vh, 100% 55vh, 0 100%);
-      /* >> x y << Every "," is a line of the box */
-      height: 95vh;
-      /* number * VH means viewport hight */ } }
+  transform: translateY(-40rem); }
   @media only screen and (max-width: 50em), only screen and (hover: none) {
-    @supports (clip-path: 0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-      .gallery {
-        -webkit-clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%);
-        /* >> x y << Every "," is a line of the box */
-        -moz-clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%);
-        /* >> x y << Every "," is a line of the box */
-        clip-path: polygon(0 0, 100% 30vh, 100% 70vh, 0 100%);
-        /* >> x y << Every "," is a line of the box */
-        height: 105vh;
-        /* number * VH means viewport hight */ } } }
+    .gallery {
+      transform: translateY(-60rem);
+      height: 60rem; } }
   @media only screen and (max-width: 31.25em) {
     .gallery {
-      transform: translateY(5rem); }
-      @supports (clip-path: 0 polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-        .gallery {
-          -webkit-clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%);
-          /* >> x y << Every "," is a line of the box */
-          -moz-clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%);
-          /* >> x y << Every "," is a line of the box */
-          clip-path: polygon(0 0, 100% 15vh, 100% 150vh, 0 100%);
-          /* >> x y << Every "," is a line of the box */
-          height: 170vh;
-          /* number * VH means viewport hight */ } } }
+      transform: translateY(5rem);
+      height: 95rem; } }
   .gallery__content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-left: 10rem; }
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 10%;
+    padding-right: 10%; }
     @media only screen and (max-width: 50em), only screen and (hover: none) {
       .gallery__content {
         grid-template-columns: repeat(2, 1fr);
-        padding-left: 5rem;
-        padding-right: 5rem; } }
+        padding-left: 5%;
+        padding-right: 5%; } }
     @media only screen and (max-width: 31.25em) {
       .gallery__content {
         grid-template-columns: 1fr; } }
   .gallery__one, .gallery__two, .gallery__three {
-    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
-    transform: translateY(27vh);
     filter: grayscale(100%);
     transition: all ease 0.5s;
     text-align: center; }
@@ -476,67 +449,25 @@ body {
         opacity: 0;
         transform: translateY(3rem); }
     @media only screen and (max-width: 50em), only screen and (hover: none) {
-      .gallery__one, .gallery__two, .gallery__three {
-        transform: translateY(18vh); }
-        .gallery__one p, .gallery__two p, .gallery__three p {
-          font-size: 2.5rem; } }
+      .gallery__one p, .gallery__two p, .gallery__three p {
+        font-size: 2.5rem; } }
     @media only screen and (max-width: 31.25em) {
       .gallery__one p, .gallery__two p, .gallery__three p {
         font-size: 2.2rem; } }
-  .gallery__one {
-    padding-left: 5rem; }
-    .gallery__one img {
+  .gallery__one, .gallery__three {
+    padding-top: 5%; }
+    .gallery__one img, .gallery__three img {
       width: 100%; }
-    .gallery__one p {
-      transform: translateY(-23rem); }
+    .gallery__one p, .gallery__three p {
+      transform: translateY(-550%); }
     @media only screen and (max-width: 50em), only screen and (hover: none) {
-      .gallery__one {
-        padding-left: 0; }
-        .gallery__one img {
-          width: 90%; }
-        .gallery__one p {
-          transform: translateY(-18rem); } }
+      .gallery__one, .gallery__three {
+        padding-top: 20%; }
+        .gallery__one img, .gallery__three img {
+          width: 90%; } }
     @media only screen and (max-width: 31.25em) {
-      .gallery__one p {
+      .gallery__one p, .gallery__three p {
         transform: translateY(-16rem); } }
-  .gallery__two {
-    margin-left: 5rem; }
-    .gallery__two img {
-      width: 75%; }
-    .gallery__two p {
-      transform: translateY(-20rem); }
-    @media only screen and (max-width: 50em), only screen and (hover: none) {
-      .gallery__two {
-        margin-left: 0;
-        margin-top: 15rem; }
-        .gallery__two img {
-          width: 90%; }
-        .gallery__two p {
-          transform: translateY(-18rem); } }
-    @media only screen and (max-width: 31.25em) {
-      .gallery__two {
-        transform: translateY(1rem); }
-        .gallery__two p {
-          transform: translateY(-16rem); } }
-  .gallery__three {
-    margin-right: 5rem; }
-    .gallery__three img {
-      width: 60%; }
-    .gallery__three p {
-      transform: translateY(-17rem); }
-    @media only screen and (max-width: 50em), only screen and (hover: none) {
-      .gallery__three {
-        margin-right: 0;
-        transform: translateY(-1rem); }
-        .gallery__three img {
-          width: 90%; }
-        .gallery__three p {
-          transform: translateY(-18rem); } }
-    @media only screen and (max-width: 31.25em) {
-      .gallery__three {
-        transform: translateY(5rem); }
-        .gallery__three p {
-          transform: translateY(-16rem); } }
 
 /*-- ************** G A L L E R Y  O N E ************** --*/
 /* The Modal (background) */
